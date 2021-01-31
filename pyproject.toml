@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ifconfig"
+version = "0.1.0"
+description = ""
+authors = ["Yusuke Ohshima <ohshima.yusuke@yukke.org>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+uvicorn = "^0.13.3"
+fastapi = "^0.63.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
