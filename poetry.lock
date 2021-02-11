@@ -254,7 +254,7 @@ standard = ["websockets (>=8.0.0,<9.0.0)", "watchgod (>=0.6,<0.7)", "python-dote
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "05f07694352386b129e095d1c3bf7c496a22a54bdbca064e2ea4b315c354cb09"
+content-hash = "77ef9b5096331743a2484aa07d4c833f77473676b56f0705e16dae79f036001c"
 
 [metadata.files]
 atomicwrites = [
