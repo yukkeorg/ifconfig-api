@@ -8,6 +8,7 @@ authors = ["Yusuke Ohshima <ohshima.yusuke@yukke.org>"]
 python = "^3.8"
 uvicorn = "^0.13.3"
 fastapi = "^0.63.0"
+pydantic = "^1.7.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.2"
