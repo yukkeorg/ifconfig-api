@@ -1,3 +1,6 @@
+# ------------------------------------------------------------
+# Build Container --------------------------------------------
+# ------------------------------------------------------------
 FROM python:3.9-slim as builder
 
 WORKDIR /opt/app
@@ -6,12 +9,14 @@ RUN python3 -m pip install poetry
 COPY pyproject.toml poetry.lock ./
 RUN poetry export -f requirements.txt > requirements.txt
 
-
-FROM python:3.9-slim
+# ------------------------------------------------------------
+# Runtime Container ------------------------------------------
+# ------------------------------------------------------------
+FROM python:3.9-slim as runtime
 
 WORKDIR /opt/app
 
-ENV PYTHONBUFFERD=1
+ENV PYTHONBUFFERED=1
 COPY --from=builder /opt/app/requirements.txt .
 RUN python3 -m pip install -U setuptools pip && \
     python3 -m pip install -r requirements.txt
